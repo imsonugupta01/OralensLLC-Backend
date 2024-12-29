@@ -16,8 +16,8 @@ exports.createTeam = async (req, res) => {
 
 exports.getTeamsByOrganization = async (req, res) => {
   try {
-    const {Id}=req.params
-    const teams = await Team.find({ organizationId: Id });
+    const {organizationId}=req.params
+    const teams = await Team.find({ organizationId: organizationId });
     res.json(teams);
   } catch (err) {
     res.status(500).json({ error: "Error" });
