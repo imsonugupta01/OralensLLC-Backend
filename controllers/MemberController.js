@@ -162,7 +162,7 @@ exports.getMembersByTeam = async (req, res) => {
     const members = await Member.find({ teamId: req.params.teamId });
     res.json(members);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "error" });
   }
 };
 
@@ -198,7 +198,7 @@ exports.getMembersByTeam = async (req, res) => {
 
     res.json(teamMembersCount);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "error" });
   }
 };
 
