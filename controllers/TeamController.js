@@ -10,7 +10,7 @@ exports.createTeam = async (req, res) => {
     await team.save();
     res.status(201).json(team);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "Error"});
   }
 };
 
@@ -19,7 +19,7 @@ exports.getTeamsByOrganization = async (req, res) => {
     const teams = await Team.find({ organizationId: req.params.organizationId });
     res.json(teams);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "Error" });
   }
 };
 

@@ -7,9 +7,7 @@ const router = express.Router();
 // const upload = multer({ dest: 'src/uploads/' });
 
 router.post('/add', createMember);
-// router.post('/upload/:id', upload.single('image'), uploadImage);
-// router.get('/team/:teamId', getIndividualsByTeam);
-// router.get('/all', getAllIndividuals);
+
 router.get("/findAll",getAllMembers)
 router.get("/find",getMembersByTeam)
 router.post("/login",login)

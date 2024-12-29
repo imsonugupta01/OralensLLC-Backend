@@ -171,7 +171,7 @@ exports.getAllMembers = async (req, res) => {
     const Members = await Member.find();
     res.json(Members);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "Error" });
   }
 };
 

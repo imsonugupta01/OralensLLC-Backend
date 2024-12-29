@@ -33,7 +33,7 @@ exports.createOrganization = async (req, res) => {
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: "Error" });
   }
 };
 
@@ -79,7 +79,7 @@ exports.getOrganizations = async (req, res) => {
     const organization = await Organization.findById(Id);
     res.json(organization);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error:"Error" });
   }
 };
 
